@@ -1,0 +1,58 @@
+<!doctype html>
+<title>jQuery Field of Depth</title>
+<style type="text/css">
+body{
+	font-family : sans-serif;
+	max-width: 300px;
+	margin: 0 auto;
+	border-width: 0px 0px 0px 1px;
+	border-style: solid;
+	border-color: #06c;
+}
+img{
+	max-width: 100%;
+}
+h1{
+	font-size: 100pt;
+	margin: 0;
+	width: 500px;
+	padding: 5px;
+}
+p{
+	text-align: justify;
+	margin: 10px 0;
+	border-width: 0px 0px 0px 1px;
+	border-style: solid;
+	border-color: #06c;
+	padding: 20px;
+}
+
+body > div > *:hover{
+	-webkit-filter : blur(0px)!important;
+	-webkit-transition: all 1s;
+}
+</style>
+<div>
+	<button>Reverse</button>
+	<h1> Hello World</h1>
+	<img src=http://furiousmiles.com/wp-content/uploads/2011/12/5.21.jpg />
+	<p>Jelly beans sesame snaps sesame snaps pie cake biscuit tart faworki. Jujubes jujubes gummi bears tiramisu toffee.</p>
+	<p>I love I love lollipop macaroon brownie. Carrot cake muffin marzipan cotton candy. Pie cheesecake I love pudding chocolate cake jelly. I love ice cream donut toffee. I love sweet roll chocolate cake wypas ice cream wafer. Pudding oat cake caramels jelly beans. Tiramisu candy canes I love tiramisu. Wafer pastry halvah dragée pastry chocolate cake I love tart.</p> 
+	<p>Chocolate bar I love cotton candy donut cheesecake cupcake. Candy canes candy canes cake I love wypas. Gummies apple pie I love marshmallow oat cake tootsie roll gummi bears.</p>
+	<p>Sweet toffee candy donut biscuit. Wafer fruitcake carrot cake dragée candy canes cookie fruitcake.</p>
+	<p>I love pastry applicake biscuit liquorice sugar plum gummies pie. Dragée croissant sweet. Jelly-o donut apple pie. I love sugar plum muffin candy canes brownie I love applicake. Gummi bears topping danish oat cake I love cheesecake. Liquorice dragée I love jujubes tootsie roll candy canes. Tiramisu brownie pastry tootsie roll pastry wafer danish.</p>
+	<p> Marzipan tootsie roll I love macaroon cake. Lemon drops muffin I love ice cream candy chocolate bar. Jelly-o chocolate cake muffin gummies topping faworki pudding. Candy marshmallow ice cream macaroon tiramisu powder.</p>
+</div>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+<script src="./depth.js"></script>
+<script>
+	$(function(){
+		var els = $("div").find("*");
+		els.depth();
+		$("button").toggle(function(){
+			els.depth({reverse:true});
+		}, function(){
+			els.depth();
+		});
+	}());
+</script>
